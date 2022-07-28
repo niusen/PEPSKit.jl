@@ -1,5 +1,5 @@
 module PEPSKit
-    using TensorKit, KrylovKit, MPSKit, OptimKit, Base.Threads, Base.Iterators
+    using TensorKit, KrylovKit, MPSKit, OptimKit, Base.Threads, Base.Iterators, Parameters
     import LinearAlgebra
 
     export CTMRG
@@ -21,4 +21,10 @@ module PEPSKit
 
     export InfinitePEPS, InfiniteTransferPEPS
     export initializeMPS
+    
+    #default settings
+    module Defaults
+        const maxiter = 100
+        const tol = 1e-12
+    end
 end # module
